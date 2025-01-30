@@ -1,0 +1,23 @@
+[package]
+name = "tcp-echo-client"
+description = "TCP echo client for everybody who want test his TCP echo server."
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0"
+repository = "https://github.com/gohryt/tcp-echo-client"
+
+[[bin]]
+name = "tcp-echo-client"
+path = "src/main.rs"
+
+[dependencies]
+argh = "0.1.13"
+tokio = { version = "1.43.0", features = [
+    "macros",
+    "rt-multi-thread",
+    "io-util",
+    "net",
+    "sync",
+    "time",
+    "io-std",
+] }
